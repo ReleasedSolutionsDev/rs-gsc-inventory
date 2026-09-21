@@ -1,0 +1,632 @@
+<title>Coverage Inventory</title>
+<style>
+  :root {
+    --ground: #f6f5f2;
+    --card: #ffffff;
+    --text: #1a1d21;
+    --muted: #5b6068;
+    --border: #e5e0d6;
+    --border-strong: #d4cec2;
+    --accent: #3F97E9;
+    --accent-ink: #1e6ab8;
+
+    /* semantic status */
+    --ok-fg: #166f2c;
+    --ok-bg: #e2f4de;
+    --ok-line: #b7dab0;
+
+    --warn-fg: #8b6b00;
+    --warn-bg: #fbedc7;
+    --warn-line: #e8d38a;
+
+    --info-fg: #3d5a7a;
+    --info-bg: #e2ecf5;
+    --info-line: #b9cee0;
+
+    --dim-fg: #67665f;
+    --dim-bg: #ebe7de;
+    --dim-line: #d0cabc;
+
+    --err-fg: #a03030;
+    --err-bg: #f8d9d3;
+    --err-line: #e5b3ab;
+
+    --shadow-1: 0 1px 2px rgba(20,22,26,0.04);
+  }
+  :root:not([data-theme="light"]) { }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #14161a;
+      --card: #1c1f24;
+      --text: #ebe6dc;
+      --muted: #9aa0a6;
+      --border: #2c3037;
+      --border-strong: #3a3f47;
+      --accent: #6dadec;
+      --accent-ink: #8fc3f2;
+      --ok-fg: #6cc27c;   --ok-bg: #143a1c;   --ok-line: #245c30;
+      --warn-fg: #d9b344; --warn-bg: #3a2f0a; --warn-line: #634f16;
+      --info-fg: #8db4dc; --info-bg: #17283a; --info-line: #2b476a;
+      --dim-fg: #a2a29a;  --dim-bg: #24252a;  --dim-line: #383a41;
+      --err-fg: #ea8578;  --err-bg: #3a1616;  --err-line: #6a2323;
+      --shadow-1: 0 1px 2px rgba(0,0,0,0.5);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #14161a;
+    --card: #1c1f24;
+    --text: #ebe6dc;
+    --muted: #9aa0a6;
+    --border: #2c3037;
+    --border-strong: #3a3f47;
+    --accent: #6dadec;
+    --accent-ink: #8fc3f2;
+    --ok-fg: #6cc27c;   --ok-bg: #143a1c;   --ok-line: #245c30;
+    --warn-fg: #d9b344; --warn-bg: #3a2f0a; --warn-line: #634f16;
+    --info-fg: #8db4dc; --info-bg: #17283a; --info-line: #2b476a;
+    --dim-fg: #a2a29a;  --dim-bg: #24252a;  --dim-line: #383a41;
+    --err-fg: #ea8578;  --err-bg: #3a1616;  --err-line: #6a2323;
+    --shadow-1: 0 1px 2px rgba(0,0,0,0.5);
+  }
+
+  body {
+    background: var(--ground);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 20px 80px;
+  }
+
+  header.page-head {
+    display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+    gap: 12px; margin-bottom: 20px;
+  }
+  header.page-head h1 {
+    font-size: 22px; font-weight: 700; letter-spacing: -0.01em;
+    margin: 0; text-wrap: balance;
+  }
+  header.page-head .meta {
+    color: var(--muted); font-size: 12.5px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .tile {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    box-shadow: var(--shadow-1);
+    cursor: pointer;
+    user-select: none;
+    transition: transform .06s ease, border-color .12s ease;
+  }
+  .tile:hover { border-color: var(--border-strong); }
+  .tile:active { transform: translateY(1px); }
+  .tile.active {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px color-mix(in oklab, var(--accent) 25%, transparent);
+  }
+  .tile .label {
+    font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--muted); font-weight: 600;
+  }
+  .tile .value {
+    font-size: 28px; font-weight: 650; letter-spacing: -0.02em;
+    margin-top: 4px; font-variant-numeric: tabular-nums; line-height: 1.05;
+  }
+  .tile .sub {
+    font-size: 11.5px; color: var(--muted); margin-top: 4px;
+  }
+  .tile.ok    .value { color: var(--ok-fg); }
+  .tile.warn  .value { color: var(--warn-fg); }
+  .tile.info  .value { color: var(--info-fg); }
+  .tile.dim   .value { color: var(--dim-fg); }
+
+  .controls {
+    display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    box-shadow: var(--shadow-1);
+  }
+  .controls input[type="search"] {
+    flex: 1 1 220px; min-width: 0;
+    padding: 8px 10px; font: inherit; color: var(--text);
+    background: transparent; border: 1px solid var(--border-strong);
+    border-radius: 6px;
+    outline: none;
+  }
+  .controls input[type="search"]:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 20%, transparent);
+  }
+  .controls button.reset {
+    padding: 7px 12px; font: inherit; font-size: 13px;
+    background: transparent; border: 1px solid var(--border-strong);
+    color: var(--muted); border-radius: 6px; cursor: pointer;
+  }
+  .controls button.reset:hover { color: var(--text); }
+  .controls .filter-label {
+    color: var(--muted); font-size: 12px; letter-spacing: 0.03em;
+  }
+
+  .table-wrap {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow-1);
+  }
+  .scroller { overflow-x: auto; }
+  table.inv {
+    width: 100%; border-collapse: collapse;
+    font-variant-numeric: tabular-nums;
+  }
+  table.inv th {
+    text-align: left;
+    font-size: 11.5px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.05em;
+    color: var(--muted);
+    padding: 10px 12px; background: transparent;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+    cursor: pointer; user-select: none;
+    position: sticky; top: 0;
+    background: var(--card);
+    z-index: 1;
+  }
+  table.inv th .sort {
+    display: inline-block;
+    width: 10px; text-align: center; margin-left: 2px;
+    color: var(--border-strong);
+  }
+  table.inv th.sorted .sort { color: var(--accent); }
+  table.inv td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    font-size: 13px;
+  }
+  table.inv tr:last-child td { border-bottom: none; }
+  table.inv tr:hover td { background: color-mix(in oklab, var(--accent) 6%, transparent); }
+  table.inv td.url-cell {
+    max-width: 460px;
+    word-break: break-word;
+  }
+  table.inv td.url-cell a {
+    color: var(--text); text-decoration: none;
+  }
+  table.inv td.url-cell a:hover { color: var(--accent-ink); text-decoration: underline; }
+  table.inv td.url-cell .path { color: var(--muted); font-size: 12px; }
+
+  .pill {
+    display: inline-block;
+    font-size: 11.5px; font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    letter-spacing: 0.01em;
+  }
+  .pill.ok    { color: var(--ok-fg);    background: var(--ok-bg);    border-color: var(--ok-line); }
+  .pill.warn  { color: var(--warn-fg);  background: var(--warn-bg);  border-color: var(--warn-line); }
+  .pill.info  { color: var(--info-fg);  background: var(--info-bg);  border-color: var(--info-line); }
+  .pill.dim   { color: var(--dim-fg);   background: var(--dim-bg);   border-color: var(--dim-line); }
+  .pill.err   { color: var(--err-fg);   background: var(--err-bg);   border-color: var(--err-line); }
+
+  .mono, .lastcrawl { font-size: 12px; color: var(--muted); }
+  .canon {
+    font-size: 11px; font-weight: 600;
+  }
+  .canon.match    { color: var(--ok-fg); }
+  .canon.mismatch { color: var(--err-fg); }
+
+  .empty {
+    padding: 40px 12px; text-align: center; color: var(--muted); font-size: 13px;
+  }
+
+  /* Submitted checkbox column */
+  table.inv th.check-col, table.inv td.check-col {
+    width: 44px; text-align: center; padding-left: 12px; padding-right: 6px;
+    cursor: default;
+  }
+  table.inv td.check-col input[type="checkbox"] {
+    width: 16px; height: 16px; accent-color: var(--accent);
+    cursor: pointer;
+    vertical-align: middle;
+  }
+  table.inv tr.done td.url-cell a { color: var(--muted); text-decoration: line-through; text-decoration-thickness: 1px; }
+  table.inv tr.done td { opacity: 0.62; }
+  table.inv tr.done:hover td { opacity: 0.9; }
+  table.inv tr.na-check td.check-col { color: var(--border-strong); font-size: 11px; }
+
+  .progress-line {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12px; color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .sync-badge {
+    font-size: 11.5px; padding: 2px 8px; border-radius: 999px;
+    border: 1px solid var(--dim-line);
+    color: var(--dim-fg); background: var(--dim-bg);
+    letter-spacing: 0.01em; white-space: nowrap;
+  }
+  .sync-badge[data-state="syncing"] { color: var(--info-fg); background: var(--info-bg); border-color: var(--info-line); }
+  .sync-badge[data-state="synced"]  { color: var(--ok-fg);   background: var(--ok-bg);   border-color: var(--ok-line); }
+  .sync-badge[data-state="offline"] { color: var(--warn-fg); background: var(--warn-bg); border-color: var(--warn-line); }
+  .progress-line .bar {
+    display: inline-block; width: 90px; height: 6px;
+    background: var(--dim-bg); border-radius: 3px; overflow: hidden;
+    vertical-align: middle;
+  }
+  .progress-line .bar > span {
+    display: block; height: 100%;
+    background: var(--accent);
+    transition: width .2s ease;
+  }
+
+  .legend {
+    margin-top: 14px; color: var(--muted); font-size: 12.5px;
+    display: flex; flex-wrap: wrap; gap: 12px 20px;
+  }
+  .legend .item { display: inline-flex; align-items: center; gap: 6px; }
+
+  @media (max-width: 640px) {
+    .wrap { padding: 16px 16px 60px; }
+    header.page-head h1 { font-size: 20px; }
+    .tile .value { font-size: 24px; }
+    table.inv th, table.inv td { padding: 8px 10px; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="page-head">
+    <div>
+      <h1>Coverage Inventory · releasedsolutions.net</h1>
+      <div class="meta" id="metaline">— loading —</div>
+    </div>
+  </header>
+
+  <div class="tiles" id="tiles"></div>
+
+  <div class="controls">
+    <input type="search" id="q" placeholder="Filter URLs (e.g. blog, case-study, ai)" autocomplete="off">
+    <span class="filter-label" id="filterlabel"></span>
+    <span class="progress-line" id="progress" hidden>
+      <span class="bar"><span id="bar-fill" style="width:0%"></span></span>
+      <span id="progress-text">0 of 0 submitted</span>
+    </span>
+    <span class="sync-badge" id="sync-badge" data-state="local">Local only</span>
+    <button class="reset" id="clear-checks" title="Uncheck every submitted-marker">Clear ✓</button>
+    <button class="reset" id="reset">Reset filters</button>
+  </div>
+
+  <div class="table-wrap">
+    <div class="scroller">
+      <table class="inv" id="tbl">
+        <thead>
+          <tr>
+            <th class="check-col" title="Check off URLs you've submitted for indexing in GSC">✓</th>
+            <th data-col="url">URL <span class="sort">↕</span></th>
+            <th data-col="bucket">State <span class="sort">↕</span></th>
+            <th data-col="coverage" class="hide-narrow">Coverage <span class="sort">↕</span></th>
+            <th data-col="last_crawl">Last crawl <span class="sort">↕</span></th>
+            <th data-col="canon_match" class="hide-narrow">Canonical <span class="sort">↕</span></th>
+            <th data-col="robots" class="hide-narrow">Robots <span class="sort">↕</span></th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+      <div class="empty" id="empty" hidden>No URLs match this filter.</div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <div class="item"><span class="pill ok">Indexed</span> in Google's index</div>
+    <div class="item"><span class="pill info">Discovered</span> found, not yet crawled</div>
+    <div class="item"><span class="pill warn">Crawled</span> visited, chose not to index</div>
+    <div class="item"><span class="pill dim">Not Discovered</span> Google doesn't know about it yet</div>
+  </div>
+
+</div>
+
+<script id="inv-data" type="application/json">__DATA__</script>
+<script>
+(function () {
+  const data = JSON.parse(document.getElementById("inv-data").textContent);
+  const rows = data.rows;
+  const metaLine = document.getElementById("metaline");
+  const dt = new Date(data.generated_utc);
+  metaLine.textContent = `${data.total} URLs · generated ${dt.toLocaleString(undefined, {year:"numeric",month:"short",day:"numeric",hour:"2-digit",minute:"2-digit"})}`;
+
+  // ---- checkbox state ----
+  // Shared across every device signed in as this viewer via the artifact db
+  // at data/users/<uid>/checkmarks. localStorage is a fallback for offline /
+  // db-unavailable and gets migrated up on first successful sync.
+  const STORE_KEY = "rs-gsc-inv:submitted:v1";
+  function loadLocal() {
+    try {
+      const raw = localStorage.getItem(STORE_KEY);
+      return raw ? JSON.parse(raw) : {};
+    } catch (e) { return {}; }
+  }
+  function saveLocal(obj) {
+    try { localStorage.setItem(STORE_KEY, JSON.stringify(obj)); }
+    catch (e) { /* private window etc — silent */ }
+  }
+  const done = loadLocal();
+
+  let dbRef = null;
+  let dbBooted = false;
+  let syncStatus = "local"; // local | syncing | synced | offline
+
+  function setSyncStatus(s) {
+    syncStatus = s;
+    const el = document.getElementById("sync-badge");
+    if (!el) return;
+    el.dataset.state = s;
+    el.textContent = {
+      local:   "Local only",
+      syncing: "Syncing…",
+      synced:  "Synced across devices",
+      offline: "Offline — saved locally",
+    }[s] || s;
+  }
+
+  async function initSync() {
+    let db = null, user = null;
+    try {
+      [db, user] = await Promise.all([
+        window.claude?.use?.("db")   ?? Promise.resolve(null),
+        window.claude?.use?.("user") ?? Promise.resolve(null),
+      ]);
+    } catch (e) { return; }
+    if (!db || !user) return;
+    let uid = null;
+    try { uid = await user.id(); } catch (e) { return; }
+    if (!uid) return;
+    dbRef = db.doc("data/users/" + uid + "/checkmarks");
+    setSyncStatus("syncing");
+    dbRef.onSnapshot(snap => {
+      const remote = snap.exists ? ((snap.data() || {}).submitted || {}) : {};
+      const remoteKeys = Object.keys(remote);
+      if (!dbBooted && !snap.exists && Object.keys(done).length > 0) {
+        // First-time on this account with pre-existing local checks — migrate up.
+        dbRef.set({ submitted: { ...done }, updated_at: new Date().toISOString() })
+          .then(() => { try { localStorage.removeItem(STORE_KEY); } catch(e) {} })
+          .catch(err => console.warn("[db] migrate failed", err));
+      } else {
+        const localKeys = Object.keys(done);
+        const changed = localKeys.length !== remoteKeys.length
+                     || localKeys.some(k => !remote[k])
+                     || remoteKeys.some(k => !done[k]);
+        if (changed) {
+          for (const k of localKeys) delete done[k];
+          for (const k of remoteKeys) done[k] = 1;
+          try { localStorage.removeItem(STORE_KEY); } catch(e) {}
+          if (typeof render === "function") render();
+        }
+      }
+      dbBooted = true;
+      setSyncStatus("synced");
+    }, err => {
+      console.warn("[db] onSnapshot error", err);
+      setSyncStatus("offline");
+    });
+  }
+  initSync();
+
+  async function persist() {
+    // Always mirror locally so a lost connection keeps working
+    saveLocal(done);
+    if (!dbRef) return;
+    try {
+      await dbRef.set({ submitted: { ...done }, updated_at: new Date().toISOString() });
+      setSyncStatus("synced");
+    } catch (err) {
+      console.warn("[db] set failed", err);
+      setSyncStatus("offline");
+    }
+  }
+  const needsCheck = (r) => r.bucket !== "Indexed"; // Indexed rows have no checkbox
+  function updateProgress() {
+    const pool = rows.filter(needsCheck);
+    const total = pool.length;
+    const submitted = pool.filter(r => done[r.url]).length;
+    const pct = total ? Math.round((submitted / total) * 100) : 0;
+    const el = document.getElementById("progress");
+    if (!total) { el.hidden = true; return; }
+    el.hidden = false;
+    document.getElementById("bar-fill").style.width = pct + "%";
+    document.getElementById("progress-text").textContent =
+      `${submitted} of ${total} submitted (${pct}%)`;
+  }
+
+  // ---- bucket tiles ----
+  const bucketOrder = ["Indexed","Not Discovered","Discovered","Crawled"];
+  const bucketClass = {
+    "Indexed": "ok", "Discovered": "info", "Crawled": "warn", "Not Discovered": "dim",
+    "Noindex": "dim", "Duplicate": "warn", "Alternate": "info",
+    "404": "err", "Soft 404": "err", "Blocked": "err", "Server error": "err",
+  };
+  const bucketHelp = {
+    "Indexed": "in Google's index",
+    "Not Discovered": "Google hasn't found the URL yet",
+    "Discovered": "found but not yet crawled",
+    "Crawled": "crawled but not indexed",
+  };
+  const counts = {};
+  for (const r of rows) counts[r.bucket] = (counts[r.bucket] || 0) + 1;
+  const orderedBuckets = [...bucketOrder, ...Object.keys(counts).filter(k => !bucketOrder.includes(k))];
+  const tiles = document.getElementById("tiles");
+  const state = { bucket: null, q: "", sortCol: "bucket", sortDir: 1 };
+  for (const b of orderedBuckets) {
+    if (!counts[b]) continue;
+    const div = document.createElement("div");
+    div.className = "tile " + (bucketClass[b] || "info");
+    div.dataset.bucket = b;
+    div.innerHTML = `
+      <div class="label">${b}</div>
+      <div class="value">${counts[b]}</div>
+      <div class="sub">${bucketHelp[b] || ""}</div>`;
+    div.addEventListener("click", () => {
+      state.bucket = (state.bucket === b) ? null : b;
+      updateActive();
+      render();
+    });
+    tiles.appendChild(div);
+  }
+  function updateActive() {
+    tiles.querySelectorAll(".tile").forEach(el => {
+      el.classList.toggle("active", el.dataset.bucket === state.bucket);
+    });
+    document.getElementById("filterlabel").textContent = state.bucket ? ("· " + state.bucket) : "";
+  }
+
+  // ---- search ----
+  const qEl = document.getElementById("q");
+  qEl.addEventListener("input", e => { state.q = e.target.value.toLowerCase().trim(); render(); });
+  document.getElementById("reset").addEventListener("click", () => {
+    state.q = ""; state.bucket = null;
+    qEl.value = "";
+    updateActive();
+    render();
+  });
+
+  // ---- sorting ----
+  document.querySelectorAll("th[data-col]").forEach(th => {
+    th.addEventListener("click", () => {
+      const col = th.dataset.col;
+      if (state.sortCol === col) state.sortDir = -state.sortDir;
+      else { state.sortCol = col; state.sortDir = 1; }
+      render();
+    });
+  });
+
+  // ---- render ----
+  const tbody = document.getElementById("tbody");
+  const emptyEl = document.getElementById("empty");
+  const bucketRank = Object.fromEntries(orderedBuckets.map((b,i) => [b,i]));
+
+  function fmtDate(iso) {
+    if (!iso) return "—";
+    const d = new Date(iso);
+    if (isNaN(d)) return "—";
+    return d.toLocaleDateString(undefined, {year:"numeric",month:"short",day:"numeric"});
+  }
+  function shortPath(url) {
+    try {
+      const u = new URL(url);
+      return u.pathname + (u.search || "");
+    } catch(e) { return url; }
+  }
+  function render() {
+    const filtered = rows.filter(r => {
+      if (state.bucket && r.bucket !== state.bucket) return false;
+      if (state.q && !(r.url.toLowerCase().includes(state.q) || (r.bucket||"").toLowerCase().includes(state.q))) return false;
+      return true;
+    });
+    const dir = state.sortDir;
+    filtered.sort((a,b) => {
+      let va, vb;
+      if (state.sortCol === "bucket") {
+        va = bucketRank[a.bucket] ?? 99; vb = bucketRank[b.bucket] ?? 99;
+      } else if (state.sortCol === "last_crawl") {
+        va = a.last_crawl || ""; vb = b.last_crawl || "";
+      } else {
+        va = (a[state.sortCol] || "").toString().toLowerCase();
+        vb = (b[state.sortCol] || "").toString().toLowerCase();
+      }
+      if (va < vb) return -1 * dir;
+      if (va > vb) return  1 * dir;
+      // secondary sort by URL for stability
+      return a.url < b.url ? -1 : (a.url > b.url ? 1 : 0);
+    });
+    document.querySelectorAll("th[data-col]").forEach(th => {
+      const isSorted = th.dataset.col === state.sortCol;
+      th.classList.toggle("sorted", isSorted);
+      const s = th.querySelector(".sort");
+      if (s) s.textContent = isSorted ? (dir > 0 ? "↑" : "↓") : "↕";
+    });
+
+    tbody.innerHTML = "";
+    if (!filtered.length) { emptyEl.hidden = false; return; } else { emptyEl.hidden = true; }
+
+    for (const r of filtered) {
+      const tr = document.createElement("tr");
+      const bcls = bucketClass[r.bucket] || "info";
+      const canonHtml = r.canon_match === "match" ? '<span class="canon match">match</span>' :
+                        r.canon_match === "MISMATCH" ? '<span class="canon mismatch">mismatch</span>' :
+                        '<span class="canon">—</span>';
+      const robotsShort = (r.robots || "").replace(/_/g," ").toLowerCase();
+      const isCheckable = needsCheck(r);
+      const isDone = isCheckable && !!done[r.url];
+      const checkCell = isCheckable
+        ? `<td class="check-col"><input type="checkbox" data-url="${r.url}" ${isDone ? "checked" : ""} aria-label="Mark ${r.url} as submitted for indexing"></td>`
+        : `<td class="check-col na-check" title="Already indexed">—</td>`;
+      if (isDone) tr.classList.add("done");
+      tr.innerHTML = `
+        ${checkCell}
+        <td class="url-cell">
+          <a href="${r.url}" target="_blank" rel="noopener">${shortPath(r.url)}</a>
+        </td>
+        <td><span class="pill ${bcls}">${r.bucket}</span></td>
+        <td class="hide-narrow"><span class="mono">${r.coverage || "—"}</span></td>
+        <td class="lastcrawl">${fmtDate(r.last_crawl)}</td>
+        <td class="hide-narrow">${canonHtml}</td>
+        <td class="hide-narrow"><span class="mono">${robotsShort}</span></td>
+      `;
+      tbody.appendChild(tr);
+    }
+    updateProgress();
+  }
+  render();
+
+  // Checkbox change handler — event-delegated (survives every re-render)
+  tbody.addEventListener("change", (e) => {
+    const cb = e.target;
+    if (!(cb instanceof HTMLInputElement) || cb.type !== "checkbox") return;
+    const url = cb.dataset.url;
+    if (!url) return;
+    if (cb.checked) done[url] = 1;
+    else delete done[url];
+    persist();
+    const tr = cb.closest("tr");
+    if (tr) tr.classList.toggle("done", cb.checked);
+    updateProgress();
+  });
+
+  // Clear-all-checkmarks
+  document.getElementById("clear-checks").addEventListener("click", () => {
+    if (Object.keys(done).length === 0) return;
+    if (!confirm("Uncheck every submitted-marker?")) return;
+    for (const k of Object.keys(done)) delete done[k];
+    persist();
+    render();
+  });
+
+  // Narrow-screen: hide the wider columns
+  const mq = window.matchMedia("(max-width: 720px)");
+  function narrowToggle() {
+    document.querySelectorAll(".hide-narrow").forEach(el => el.hidden = mq.matches);
+  }
+  mq.addEventListener("change", narrowToggle);
+  narrowToggle();
+})();
+</script>
