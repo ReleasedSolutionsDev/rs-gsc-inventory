@@ -1,7 +1,7 @@
 {
   "site": "sc-domain:releasedsolutions.net",
   "sitemap": "https://releasedsolutions.net/sitemap.xml",
-  "generated_utc": "2026-09-21T12:00:31+00:00",
+  "generated_utc": "2026-09-21T12:23:37+00:00",
   "total": 97,
   "rows": [
     {
@@ -436,8 +436,8 @@
     {
       "url": "https://releasedsolutions.net/google-page-speed-test-does-it-matter/",
       "verdict": "NEUTRAL",
-      "coverage": "URL is unknown to Google",
-      "bucket": "Not Discovered",
+      "coverage": "Discovered - currently not indexed",
+      "bucket": "Discovered",
       "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "indexing": "INDEXING_STATE_UNSPECIFIED",
       "user_canonical": "",
