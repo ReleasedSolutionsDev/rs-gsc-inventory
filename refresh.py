@@ -58,8 +58,10 @@ def sitemap_urls(root: str) -> list[str]:
         if u in seen:
             continue
         seen.add(u)
+        # Browser-style UA — Cloudflare on releasedsolutions.net 403s custom UAs
         r = requests.get(u, timeout=15, headers={
-            "User-Agent": "rs-gsc-inventory/1.0 (+kdurrum@releasedsolutions.net)",
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+                          "(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
             "Accept": "application/xml, text/xml, */*",
         })
         r.raise_for_status()
