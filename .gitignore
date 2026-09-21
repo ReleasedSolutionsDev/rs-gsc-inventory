@@ -1,5 +1,6 @@
 *.json
 !inventory-*.json
+!history.json
 inventory-*.csv
 inventory.log
 gsc-service-account.json
