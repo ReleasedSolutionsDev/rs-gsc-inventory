@@ -1,8 +1,8 @@
 {
   "site": "sc-domain:releasedsolutions.net",
   "sitemap": "https://releasedsolutions.net/sitemap.xml",
-  "generated_utc": "2026-09-21T12:48:13+00:00",
-  "total": 97,
+  "generated_utc": "2026-09-21T15:37:40+00:00",
+  "total": 98,
   "rows": [
     {
       "url": "https://releasedsolutions.net/",
@@ -15,7 +15,8 @@
       "google_canonical": "https://releasedsolutions.net/",
       "canonical_match": "match",
       "last_crawl": "2026-09-20T03:46:33Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/10-reasons-i-use-ai-for-website-development/",
@@ -28,7 +29,8 @@
       "google_canonical": "https://releasedsolutions.net/10-reasons-i-use-ai-for-website-development/",
       "canonical_match": "match",
       "last_crawl": "2026-09-16T21:45:22Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/10-ways-personal-profiles-hurt-business-marketing-efforts/",
@@ -41,7 +43,8 @@
       "google_canonical": "https://releasedsolutions.net/10-ways-personal-profiles-hurt-business-marketing-efforts/",
       "canonical_match": "match",
       "last_crawl": "2026-09-17T07:36:24Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/5-digital-marketing-solutions-you-need-for-your-business/",
@@ -54,7 +57,8 @@
       "google_canonical": "https://releasedsolutions.net/5-digital-marketing-solutions-you-need-for-your-business/",
       "canonical_match": "match",
       "last_crawl": "2026-08-05T08:56:19Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/5-prompts-to-help-guide-ai-how-your-feedback-can-improve-conversations-with-chatgpt/",
@@ -67,7 +71,8 @@
       "google_canonical": "https://releasedsolutions.net/5-prompts-to-help-guide-ai-how-your-feedback-can-improve-conversations-with-chatgpt/",
       "canonical_match": "match",
       "last_crawl": "2026-09-07T01:35:29Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/ai-citations-ga4-conversions-small-business/",
@@ -80,7 +85,8 @@
       "google_canonical": "https://releasedsolutions.net/ai-citations-ga4-conversions-small-business/",
       "canonical_match": "match",
       "last_crawl": "2026-09-16T09:12:14Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/ai-image-prompts-small-business/",
@@ -93,7 +99,8 @@
       "google_canonical": "https://releasedsolutions.net/ai-image-prompts-small-business/",
       "canonical_match": "match",
       "last_crawl": "2026-09-16T07:27:08Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/ai-managed-online-presence/",
@@ -106,7 +113,8 @@
       "google_canonical": "",
       "canonical_match": "",
       "last_crawl": "",
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/ai-privacy-checklist-small-business/",
@@ -119,7 +127,8 @@
       "google_canonical": "https://releasedsolutions.net/ai-privacy-checklist-small-business/",
       "canonical_match": "match",
       "last_crawl": "2026-09-16T08:03:22Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/audience-optimization/",
@@ -132,7 +141,8 @@
       "google_canonical": "https://releasedsolutions.net/audience-optimization/",
       "canonical_match": "match",
       "last_crawl": "2026-08-04T19:40:37Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/avoid-ai-slop-sloppy-joe-content/",
@@ -145,7 +155,8 @@
       "google_canonical": "",
       "canonical_match": "",
       "last_crawl": "",
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/better-ai-prompts-small-business/",
@@ -158,7 +169,8 @@
       "google_canonical": "https://releasedsolutions.net/better-ai-prompts-small-business/",
       "canonical_match": "match",
       "last_crawl": "2026-09-16T07:42:33Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/blog/",
@@ -171,7 +183,8 @@
       "google_canonical": "https://releasedsolutions.net/blog/",
       "canonical_match": "match",
       "last_crawl": "2026-09-13T08:40:11Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/branded-content-on-social-media/",
@@ -184,7 +197,8 @@
       "google_canonical": "https://releasedsolutions.net/branded-content-on-social-media/",
       "canonical_match": "match",
       "last_crawl": "2026-08-04T19:23:52Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/branded-links-and-vanity-urls-why-your-company-needs-a-branded-domain-link/",
@@ -197,7 +211,8 @@
       "google_canonical": "https://releasedsolutions.net/branded-links-and-vanity-urls-why-your-company-needs-a-branded-domain-link/",
       "canonical_match": "match",
       "last_crawl": "2026-08-04T23:15:52Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/business-outbreak-communication-plan/",
@@ -210,7 +225,8 @@
       "google_canonical": "https://releasedsolutions.net/business-outbreak-communication-plan/",
       "canonical_match": "match",
       "last_crawl": "2026-09-16T08:10:19Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/campaign-planning-marketing-strategy-planning/",
@@ -223,7 +239,8 @@
       "google_canonical": "https://releasedsolutions.net/campaign-planning-marketing-strategy-planning/",
       "canonical_match": "match",
       "last_crawl": "2026-09-17T07:50:29Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/can-your-business-count-on-the-social-media-views/",
@@ -236,7 +253,8 @@
       "google_canonical": "https://releasedsolutions.net/can-your-business-count-on-the-social-media-views/",
       "canonical_match": "match",
       "last_crawl": "2026-08-04T22:40:57Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/case-studies/",
@@ -249,7 +267,8 @@
       "google_canonical": "",
       "canonical_match": "",
       "last_crawl": "",
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/chatbots-for-small-business/",
@@ -262,7 +281,8 @@
       "google_canonical": "https://releasedsolutions.net/chatbots-for-small-business/",
       "canonical_match": "match",
       "last_crawl": "2026-09-16T05:41:43Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/choose-domain-name-small-business/",
@@ -275,7 +295,8 @@
       "google_canonical": "https://releasedsolutions.net/choose-domain-name-small-business/",
       "canonical_match": "match",
       "last_crawl": "2026-09-16T07:49:31Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/claude-artifacts-small-business-checklist-app/",
@@ -288,7 +309,8 @@
       "google_canonical": "",
       "canonical_match": "",
       "last_crawl": "",
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/contact-us/",
@@ -301,7 +323,8 @@
       "google_canonical": "https://releasedsolutions.net/contact-us/",
       "canonical_match": "match",
       "last_crawl": "2026-09-04T07:04:13Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/conversion-rates-improved-in-5-steps/",
@@ -314,7 +337,8 @@
       "google_canonical": "https://releasedsolutions.net/conversion-rates-improved-in-5-steps/",
       "canonical_match": "match",
       "last_crawl": "2026-09-17T08:14:36Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/cookies-are-so-sweet-and-delicious/",
@@ -327,7 +351,8 @@
       "google_canonical": "https://releasedsolutions.net/cookies-are-so-sweet-and-delicious/",
       "canonical_match": "match",
       "last_crawl": "2026-08-07T20:47:16Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/digital-marketing-agency-in-miami-online-ads-campaign-management/",
@@ -340,20 +365,22 @@
       "google_canonical": "https://releasedsolutions.net/digital-marketing-agency-in-miami-online-ads-campaign-management/",
       "canonical_match": "match",
       "last_crawl": "2026-08-17T10:18:03Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/do-you-need-an-online-marketing-strategy-for-your-small-business/",
       "verdict": "NEUTRAL",
-      "coverage": "Discovered - currently not indexed",
-      "bucket": "Discovered",
+      "coverage": "URL is unknown to Google",
+      "bucket": "Not Discovered",
       "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "indexing": "INDEXING_STATE_UNSPECIFIED",
       "user_canonical": "",
       "google_canonical": "",
       "canonical_match": "",
       "last_crawl": "",
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/drive-more-local-traffic-with-targeted-google-ads/",
@@ -366,7 +393,8 @@
       "google_canonical": "https://releasedsolutions.net/drive-more-local-traffic-with-targeted-google-ads/",
       "canonical_match": "match",
       "last_crawl": "2026-09-18T19:17:15Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/email-marketing-small-business/",
@@ -379,7 +407,8 @@
       "google_canonical": "https://releasedsolutions.net/email-marketing-small-business/",
       "canonical_match": "match",
       "last_crawl": "2026-09-16T07:10:16Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/geofencing-advertising-small-business/",
@@ -392,7 +421,8 @@
       "google_canonical": "https://releasedsolutions.net/geofencing-advertising-small-business/",
       "canonical_match": "match",
       "last_crawl": "2026-09-16T08:17:18Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/going-overtown-case-study/",
@@ -405,7 +435,8 @@
       "google_canonical": "https://releasedsolutions.net/going-overtown-case-study/",
       "canonical_match": "match",
       "last_crawl": "2026-09-20T17:07:22Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/google-ads-ai-review-summaries/",
@@ -418,7 +449,8 @@
       "google_canonical": "https://releasedsolutions.net/google-ads-ai-review-summaries/",
       "canonical_match": "match",
       "last_crawl": "2026-09-16T07:04:33Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/google-fake-calls-who-keeps-calling-you-claiming-to-be-google/",
@@ -431,7 +463,8 @@
       "google_canonical": "https://releasedsolutions.net/google-fake-calls-who-keeps-calling-you-claiming-to-be-google/",
       "canonical_match": "match",
       "last_crawl": "2026-09-18T19:33:20Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/google-page-speed-test-does-it-matter/",
@@ -444,7 +477,8 @@
       "google_canonical": "",
       "canonical_match": "",
       "last_crawl": "",
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/google-ranking-factors-2026-small-business/",
@@ -457,7 +491,8 @@
       "google_canonical": "https://releasedsolutions.net/google-ranking-factors-2026-small-business/",
       "canonical_match": "match",
       "last_crawl": "2026-09-13T10:49:45Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/google-requires-ssl-certificates-what-you-need-to-know/",
@@ -470,7 +505,8 @@
       "google_canonical": "",
       "canonical_match": "",
       "last_crawl": "2026-09-20T16:25:12Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/gpt-6-astra-small-business-automation/",
@@ -483,7 +519,8 @@
       "google_canonical": "https://releasedsolutions.net/gpt-6-astra-small-business-automation/",
       "canonical_match": "match",
       "last_crawl": "2026-09-13T10:18:04Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/guided-ai-website-collaboration/",
@@ -496,7 +533,8 @@
       "google_canonical": "https://releasedsolutions.net/guided-ai-website-collaboration/",
       "canonical_match": "match",
       "last_crawl": "2026-09-20T17:07:22Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/home/",
@@ -509,7 +547,8 @@
       "google_canonical": "https://releasedsolutions.net/home/",
       "canonical_match": "match",
       "last_crawl": "2026-08-28T14:43:53Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/how-people-find-your-content/",
@@ -522,7 +561,8 @@
       "google_canonical": "https://releasedsolutions.net/how-people-find-your-content/",
       "canonical_match": "match",
       "last_crawl": "2026-09-16T06:56:04Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/how-to-choose-a-website-support-and-marketing-service-plan-for-your-business/",
@@ -535,7 +575,8 @@
       "google_canonical": "",
       "canonical_match": "",
       "last_crawl": "",
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/how-to-learn-ai-for-small-business/",
@@ -548,7 +589,8 @@
       "google_canonical": "https://releasedsolutions.net/how-to-learn-ai-for-small-business/",
       "canonical_match": "match",
       "last_crawl": "2026-09-13T09:44:55Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/how-to-leverage-food-holidays-online/",
@@ -561,7 +603,8 @@
       "google_canonical": "https://releasedsolutions.net/how-to-leverage-food-holidays-online/",
       "canonical_match": "match",
       "last_crawl": "2026-08-04T23:05:02Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/is-seo-the-only-marking-plan-your-small-business-needs/",
@@ -574,7 +617,8 @@
       "google_canonical": "https://releasedsolutions.net/is-seo-the-only-marking-plan-your-small-business-needs/",
       "canonical_match": "match",
       "last_crawl": "2026-08-05T00:09:59Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/join-wifi-network-with-social-media/",
@@ -587,7 +631,8 @@
       "google_canonical": "https://releasedsolutions.net/join-wifi-network-with-social-media/",
       "canonical_match": "match",
       "last_crawl": "2026-08-06T14:01:55Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/lead-nurturing/",
@@ -600,7 +645,8 @@
       "google_canonical": "https://releasedsolutions.net/lead-nurturing/",
       "canonical_match": "match",
       "last_crawl": "2026-08-11T06:55:45Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/learning-differences-case-study/",
@@ -613,7 +659,8 @@
       "google_canonical": "",
       "canonical_match": "",
       "last_crawl": "",
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/lluv-and-ink-case-study/",
@@ -626,20 +673,22 @@
       "google_canonical": "",
       "canonical_match": "",
       "last_crawl": "",
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/marketing-survery-step-3-thank-you/",
       "verdict": "NEUTRAL",
-      "coverage": "Discovered - currently not indexed",
-      "bucket": "Discovered",
+      "coverage": "URL is unknown to Google",
+      "bucket": "Not Discovered",
       "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "indexing": "INDEXING_STATE_UNSPECIFIED",
       "user_canonical": "",
       "google_canonical": "",
       "canonical_match": "",
       "last_crawl": "",
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/monetize-website-search-tool-queries/",
@@ -652,7 +701,8 @@
       "google_canonical": "https://releasedsolutions.net/monetize-website-search-tool-queries/",
       "canonical_match": "match",
       "last_crawl": "2026-09-18T13:09:27Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/onboarding-digital-marketing-startup/",
@@ -665,20 +715,22 @@
       "google_canonical": "https://releasedsolutions.net/onboarding-digital-marketing-startup/",
       "canonical_match": "match",
       "last_crawl": "2026-09-04T04:00:38Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/online-marketing-frequency-rate/",
       "verdict": "NEUTRAL",
-      "coverage": "Discovered - currently not indexed",
-      "bucket": "Discovered",
+      "coverage": "URL is unknown to Google",
+      "bucket": "Not Discovered",
       "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "indexing": "INDEXING_STATE_UNSPECIFIED",
       "user_canonical": "",
       "google_canonical": "",
       "canonical_match": "",
       "last_crawl": "",
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/online-presence-and-digital-marketing-coach/",
@@ -691,7 +743,8 @@
       "google_canonical": "https://releasedsolutions.net/online-presence-and-digital-marketing-coach/",
       "canonical_match": "match",
       "last_crawl": "2026-08-17T11:33:06Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/online-presence-management-for-small-business-owners/",
@@ -704,7 +757,8 @@
       "google_canonical": "https://releasedsolutions.net/online-presence-management-for-small-business-owners/",
       "canonical_match": "match",
       "last_crawl": "2026-09-13T11:03:37Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/online-presence-readiness-survey/",
@@ -717,7 +771,8 @@
       "google_canonical": "https://releasedsolutions.net/online-presence-readiness-survey/",
       "canonical_match": "match",
       "last_crawl": "2026-09-07T04:05:29Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/privacy-policy/",
@@ -730,7 +785,8 @@
       "google_canonical": "https://releasedsolutions.net/privacy-policy/",
       "canonical_match": "match",
       "last_crawl": "2026-09-06T18:05:31Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/push-notifications-5-things-your-business-needs-to-know/",
@@ -743,7 +799,8 @@
       "google_canonical": "https://releasedsolutions.net/push-notifications-5-things-your-business-needs-to-know/",
       "canonical_match": "match",
       "last_crawl": "2026-09-20T16:27:13Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/qr-codes-for-small-business/",
@@ -756,20 +813,22 @@
       "google_canonical": "https://releasedsolutions.net/qr-codes-for-small-business/",
       "canonical_match": "match",
       "last_crawl": "2026-08-04T22:52:59Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/reach-more-facebook-fans/",
       "verdict": "NEUTRAL",
-      "coverage": "Discovered - currently not indexed",
-      "bucket": "Discovered",
+      "coverage": "URL is unknown to Google",
+      "bucket": "Not Discovered",
       "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "indexing": "INDEXING_STATE_UNSPECIFIED",
       "user_canonical": "",
       "google_canonical": "",
       "canonical_match": "",
       "last_crawl": "",
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/real-cost-of-ai-for-small-business/",
@@ -782,7 +841,8 @@
       "google_canonical": "https://releasedsolutions.net/real-cost-of-ai-for-small-business/",
       "canonical_match": "match",
       "last_crawl": "2026-09-13T09:55:58Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/rock-review-optimize-create-and-kickstart-your-online-presence/",
@@ -795,10 +855,25 @@
       "google_canonical": "",
       "canonical_match": "",
       "last_crawl": "",
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/sample-page/",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed",
+      "bucket": "Discovered",
+      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "indexing": "INDEXING_STATE_UNSPECIFIED",
+      "user_canonical": "",
+      "google_canonical": "",
+      "canonical_match": "",
+      "last_crawl": "",
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "live_status": 0
+    },
+    {
+      "url": "https://releasedsolutions.net/scheduled-automation-small-business/",
       "verdict": "NEUTRAL",
       "coverage": "URL is unknown to Google",
       "bucket": "Not Discovered",
@@ -808,7 +883,8 @@
       "google_canonical": "",
       "canonical_match": "",
       "last_crawl": "",
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/seminole-theatre-case-study/",
@@ -821,7 +897,8 @@
       "google_canonical": "",
       "canonical_match": "",
       "last_crawl": "",
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/seo-aeo-geo-aio-sxo-small-business/",
@@ -834,7 +911,8 @@
       "google_canonical": "https://releasedsolutions.net/seo-aeo-geo-aio-sxo-small-business/",
       "canonical_match": "match",
       "last_crawl": "2026-09-13T10:07:01Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/short-links-dont-hurt-seo/",
@@ -847,7 +925,8 @@
       "google_canonical": "https://releasedsolutions.net/short-links-dont-hurt-seo/",
       "canonical_match": "match",
       "last_crawl": "2026-09-04T04:38:08Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/sitemaps-why-every-business-needs-one/",
@@ -860,7 +939,8 @@
       "google_canonical": "https://releasedsolutions.net/sitemaps-why-every-business-needs-one/",
       "canonical_match": "match",
       "last_crawl": "2026-09-01T14:37:49Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/social-media-content-saturation/",
@@ -873,7 +953,8 @@
       "google_canonical": "https://releasedsolutions.net/social-media-content-saturation/",
       "canonical_match": "match",
       "last_crawl": "2026-09-16T07:35:34Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/social-media-image-video-ad-sizes/",
@@ -886,7 +967,8 @@
       "google_canonical": "https://releasedsolutions.net/social-media-image-video-ad-sizes/",
       "canonical_match": "match",
       "last_crawl": "2026-09-16T09:00:54Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/social-media-optimization-for-small-businesses/",
@@ -899,7 +981,8 @@
       "google_canonical": "https://releasedsolutions.net/social-media-optimization-for-small-businesses/",
       "canonical_match": "match",
       "last_crawl": "2026-05-10T09:45:28Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/social-media-platforms-small-business/",
@@ -912,7 +995,8 @@
       "google_canonical": "https://releasedsolutions.net/social-media-platforms-small-business/",
       "canonical_match": "match",
       "last_crawl": "2026-09-16T08:24:15Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/the-importance-of-a-marketing-strategy-for-business/",
@@ -925,7 +1009,8 @@
       "google_canonical": "https://releasedsolutions.net/the-importance-of-a-marketing-strategy-for-business/",
       "canonical_match": "match",
       "last_crawl": "2026-09-18T19:15:14Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/the-technologies-that-every-small-business-needs/",
@@ -938,7 +1023,8 @@
       "google_canonical": "https://releasedsolutions.net/the-technologies-that-every-small-business-needs/",
       "canonical_match": "match",
       "last_crawl": "2026-09-20T16:27:12Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/top-10-features-your-restaurant-online-order-solution-must-have/",
@@ -951,7 +1037,8 @@
       "google_canonical": "https://releasedsolutions.net/top-10-features-your-restaurant-online-order-solution-must-have/",
       "canonical_match": "match",
       "last_crawl": "2026-08-07T12:56:51Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/top-25-offensive-social-media-post-you-should-avoid/",
@@ -964,7 +1051,8 @@
       "google_canonical": "https://releasedsolutions.net/top-25-offensive-social-media-post-you-should-avoid/",
       "canonical_match": "match",
       "last_crawl": "2026-09-18T19:17:16Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/trust-but-verify-ai-small-business/",
@@ -977,7 +1065,8 @@
       "google_canonical": "",
       "canonical_match": "",
       "last_crawl": "",
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/website-and-online-presence-tools-you-should-retain-control-over/",
@@ -990,7 +1079,8 @@
       "google_canonical": "https://releasedsolutions.net/website-and-online-presence-tools-you-should-retain-control-over/",
       "canonical_match": "match",
       "last_crawl": "2026-08-06T14:44:39Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/website-copywriting-for-small-business/",
@@ -1003,7 +1093,8 @@
       "google_canonical": "",
       "canonical_match": "",
       "last_crawl": "",
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/website-design-and-development/",
@@ -1016,7 +1107,8 @@
       "google_canonical": "https://releasedsolutions.net/website-design-and-development/",
       "canonical_match": "match",
       "last_crawl": "2026-09-06T15:35:33Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/website-engagement-turn-visitors-into-customers/",
@@ -1029,7 +1121,8 @@
       "google_canonical": "https://releasedsolutions.net/website-engagement-turn-visitors-into-customers/",
       "canonical_match": "match",
       "last_crawl": "2026-09-16T08:38:11Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/website-lead-generation-customer-support/",
@@ -1042,7 +1135,8 @@
       "google_canonical": "https://releasedsolutions.net/website-lead-generation-customer-support/",
       "canonical_match": "match",
       "last_crawl": "2026-09-16T08:49:31Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/website-maintenance-support-and-optimization/",
@@ -1055,7 +1149,8 @@
       "google_canonical": "https://releasedsolutions.net/website-maintenance-support-and-optimization/",
       "canonical_match": "match",
       "last_crawl": "2026-09-01T05:45:01Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/website-navigation-101/",
@@ -1068,7 +1163,8 @@
       "google_canonical": "https://releasedsolutions.net/website-navigation-101/",
       "canonical_match": "match",
       "last_crawl": "2026-09-20T16:25:13Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/website-redesign-loop-not-generating-leads/",
@@ -1081,7 +1177,8 @@
       "google_canonical": "",
       "canonical_match": "",
       "last_crawl": "",
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/what-are-customer-loyalty-programs/",
@@ -1094,7 +1191,8 @@
       "google_canonical": "https://releasedsolutions.net/what-are-customer-loyalty-programs/",
       "canonical_match": "match",
       "last_crawl": "2026-08-08T01:01:53Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/what-blogging-can-do-for-your-conversions/",
@@ -1107,7 +1205,8 @@
       "google_canonical": "https://releasedsolutions.net/what-blogging-can-do-for-your-conversions/",
       "canonical_match": "match",
       "last_crawl": "2026-09-13T10:30:41Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/what-is-facebook-retargeting/",
@@ -1120,7 +1219,8 @@
       "google_canonical": "https://releasedsolutions.net/what-is-facebook-retargeting/",
       "canonical_match": "match",
       "last_crawl": "2026-08-04T19:51:34Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/what-is-online-presence-management/",
@@ -1133,7 +1233,8 @@
       "google_canonical": "",
       "canonical_match": "",
       "last_crawl": "",
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/what-to-blog-about/",
@@ -1146,7 +1247,8 @@
       "google_canonical": "https://releasedsolutions.net/what-to-blog-about/",
       "canonical_match": "match",
       "last_crawl": "2026-09-16T06:36:34Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/which-food-delivery-solution-is-best-for-your-restaurant/",
@@ -1159,7 +1261,8 @@
       "google_canonical": "https://releasedsolutions.net/which-food-delivery-solution-is-best-for-your-restaurant/",
       "canonical_match": "match",
       "last_crawl": "2026-08-05T09:19:16Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/who-are-you-are-you-you/",
@@ -1172,7 +1275,8 @@
       "google_canonical": "https://releasedsolutions.net/who-are-you-are-you-you/",
       "canonical_match": "match",
       "last_crawl": "2026-07-19T10:51:28Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/why-digital-ads-dont-convert/",
@@ -1185,7 +1289,8 @@
       "google_canonical": "https://releasedsolutions.net/why-digital-ads-dont-convert/",
       "canonical_match": "match",
       "last_crawl": "2026-09-16T07:00:19Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/why-digital-marketing-advertising-matters/",
@@ -1198,7 +1303,8 @@
       "google_canonical": "https://releasedsolutions.net/why-digital-marketing-advertising-matters/",
       "canonical_match": "match",
       "last_crawl": "2026-09-16T08:31:10Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/why-funnelling-needs-to-be-in-your-marketing-strategy/",
@@ -1211,7 +1317,8 @@
       "google_canonical": "https://releasedsolutions.net/why-funnelling-needs-to-be-in-your-marketing-strategy/",
       "canonical_match": "match",
       "last_crawl": "2026-08-05T05:10:32Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/why-wont-google-index-my-page/",
@@ -1224,7 +1331,8 @@
       "google_canonical": "",
       "canonical_match": "",
       "last_crawl": "",
-      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED"
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/will-a-mobile-app-help-increase-restaurant-sales/",
@@ -1237,7 +1345,8 @@
       "google_canonical": "https://releasedsolutions.net/will-a-mobile-app-help-increase-restaurant-sales/",
       "canonical_match": "match",
       "last_crawl": "2026-09-20T16:29:12Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/wordpress-security-protect-website/",
@@ -1250,7 +1359,8 @@
       "google_canonical": "https://releasedsolutions.net/wordpress-security-protect-website/",
       "canonical_match": "match",
       "last_crawl": "2026-09-16T07:56:27Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     },
     {
       "url": "https://releasedsolutions.net/yelp-advertising-small-business/",
@@ -1263,7 +1373,8 @@
       "google_canonical": "https://releasedsolutions.net/yelp-advertising-small-business/",
       "canonical_match": "match",
       "last_crawl": "2026-09-16T07:18:42Z",
-      "fetch": "SUCCESSFUL"
+      "fetch": "SUCCESSFUL",
+      "live_status": 0
     }
   ]
 }
