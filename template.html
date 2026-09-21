@@ -385,6 +385,8 @@
     <div class="item"><span class="pill info">Discovered</span> found, not yet crawled</div>
     <div class="item"><span class="pill warn">Crawled</span> visited, chose not to index</div>
     <div class="item"><span class="pill dim">Not Discovered</span> Google doesn't know about it yet</div>
+    <div class="item"><span class="pill warn">Stale</span> Google shows 404 but URL is live — request re-crawl</div>
+    <div class="item"><span class="pill err">404</span> confirmed dead URL</div>
   </div>
 
 </div>
@@ -502,9 +504,10 @@
   }
 
   // ---- bucket tiles ----
-  const bucketOrder = ["Indexed","Not Discovered","Discovered","Crawled"];
+  const bucketOrder = ["Indexed","Not Discovered","Discovered","Crawled","Stale","404","Soft 404"];
   const bucketClass = {
     "Indexed": "ok", "Discovered": "info", "Crawled": "warn", "Not Discovered": "dim",
+    "Stale": "warn",
     "Noindex": "dim", "Duplicate": "warn", "Alternate": "info",
     "404": "err", "Soft 404": "err", "Blocked": "err", "Server error": "err",
   };
@@ -513,6 +516,8 @@
     "Not Discovered": "Google hasn't found the URL yet",
     "Discovered": "found but not yet crawled",
     "Crawled": "crawled but not indexed",
+    "Stale": "Google shows 404 but the URL is live — request re-crawl",
+    "404": "live URL confirmed 404 (deleted or moved)",
   };
   const counts = {};
   for (const r of rows) counts[r.bucket] = (counts[r.bucket] || 0) + 1;
@@ -618,6 +623,10 @@
                         r.canon_match === "MISMATCH" ? '<span class="canon mismatch">mismatch</span>' :
                         '<span class="canon">—</span>';
       const robotsShort = (r.robots || "").replace(/_/g," ").toLowerCase();
+      const liveNote = (r.bucket === "Stale" || r.bucket === "404" || r.bucket === "Soft 404")
+        && r.live_status
+        ? ` <span class="mono" style="color:${r.bucket === 'Stale' ? 'var(--warn-fg)' : 'var(--muted)'};">· live=${r.live_status}</span>`
+        : "";
       const isCheckable = needsCheck(r);
       const isDone = isCheckable && !!done[r.url];
       const checkCell = isCheckable
@@ -630,7 +639,7 @@
           <a href="${r.url}" target="_blank" rel="noopener">${shortPath(r.url)}</a>
         </td>
         <td><span class="pill ${bcls}">${r.bucket}</span></td>
-        <td class="hide-narrow"><span class="mono">${r.coverage || "—"}</span></td>
+        <td class="hide-narrow"><span class="mono">${r.coverage || "—"}</span>${liveNote}</td>
         <td class="lastcrawl">${fmtDate(r.last_crawl)}</td>
         <td class="hide-narrow">${canonHtml}</td>
         <td class="hide-narrow"><span class="mono">${robotsShort}</span></td>
@@ -684,8 +693,9 @@
     "Discovered":      "--info-fg",
     "Crawled":         "--warn-fg",
     "Not Discovered":  "--dim-fg",
+    "Stale":           "--err-fg",
   };
-  const chartBuckets = ["Indexed", "Not Discovered", "Discovered", "Crawled"];
+  const chartBuckets = ["Indexed", "Not Discovered", "Discovered", "Crawled", "Stale"];
 
   function renderTrend() {
     if (!history.length) { trendEl.hidden = true; return; }

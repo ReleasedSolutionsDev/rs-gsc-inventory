@@ -94,11 +94,31 @@ COVERAGE_BUCKET = {
     "Server error (5xx)": "Server error",
 }
 
+STALE_CANDIDATE_BUCKETS = {"404", "Soft 404"}
+
 
 def bucket_for(coverage: str) -> str:
     if not coverage:
         return "Unknown"
     return COVERAGE_BUCKET.get(coverage, coverage)
+
+
+BROWSER_UA = (
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+)
+
+
+def live_status(url: str) -> int:
+    """HEAD-check a URL, follow redirects, return final status code. 0 on error."""
+    try:
+        r = requests.head(url, timeout=10, allow_redirects=True, headers={
+            "User-Agent": BROWSER_UA,
+            "Accept": "*/*",
+        })
+        return r.status_code
+    except Exception:
+        return 0
 
 
 def main() -> int:
@@ -149,9 +169,23 @@ def main() -> int:
             "canonical_match": canon_match,
             "last_crawl": last_crawl,
             "fetch": fetch_state,
+            "live_status": 0,
         })
         print(f"  [{i:3d}/{len(urls)}] {bucket_for(coverage):15s} {u}")
         time.sleep(0.15)
+
+    # --- Live re-verify: 404/Soft 404 in the API can be stale.
+    # HEAD-check each and, if the live URL now serves 200, reclassify as "Stale".
+    for row in rows:
+        if row["bucket"] not in STALE_CANDIDATE_BUCKETS:
+            continue
+        code = live_status(row["url"])
+        row["live_status"] = code
+        if 200 <= code < 400 and code != 0:
+            print(f"  [stale] {row['bucket']:9s} → Stale · live={code} · {row['url']}")
+            row["bucket"] = "Stale"
+        else:
+            print(f"  [confirmed 404] live={code} · {row['url']}")
 
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
@@ -190,6 +224,7 @@ def main() -> int:
             {k: r[k] for k in (
                 "url", "bucket", "coverage", "robots", "indexing",
                 "last_crawl", "canonical_match", "user_canonical", "google_canonical",
+                "live_status",
             )} for r in rows
         ],
     }
