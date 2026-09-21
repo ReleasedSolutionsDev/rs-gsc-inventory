@@ -686,7 +686,7 @@
   const trendEl = document.getElementById("trend");
   const svg = document.getElementById("trend-svg");
   const legendEl = document.getElementById("trend-legend");
-  const emptyEl = document.getElementById("trend-empty");
+  const trendEmptyEl = document.getElementById("trend-empty");
 
   const bucketColorVars = {
     "Indexed":         "--ok-fg",
@@ -709,10 +709,10 @@
     if (history.length < 2) {
       svg.setAttribute("viewBox", "0 0 800 200");
       svg.innerHTML = "";
-      emptyEl.hidden = false;
+      trendEmptyEl.hidden = false;
       return;
     }
-    emptyEl.hidden = true;
+    trendEmptyEl.hidden = true;
 
     // Layout
     const W = 800, H = 200, PL = 40, PR = 12, PT = 10, PB = 28;
