@@ -51,7 +51,7 @@ jobs:
         run: |
           git config user.name  "gsc-inventory-bot"
           git config user.email "actions@github.com"
-          git add inventory.html bucket-summary.txt inventory-*.csv inventory-*.json 2>/dev/null || true
+          git add inventory.html bucket-summary.txt history.json inventory-*.csv inventory-*.json 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
