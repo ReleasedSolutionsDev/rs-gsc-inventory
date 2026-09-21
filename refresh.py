@@ -197,6 +197,42 @@ def main() -> int:
     for r in embed["rows"]:
         r["canon_match"] = r.pop("canonical_match")
 
+    # --- History: rebuild from all dated JSONs so this is idempotent ---
+    from datetime import datetime as _dt
+    history: list[dict] = []
+    seen_dates: set[str] = set()
+    # Prefer today's counts computed above; scan siblings for older days
+    today_counts = {}
+    for row in rows:
+        today_counts[row["bucket"]] = today_counts.get(row["bucket"], 0) + 1
+    history.append({"date": today, "counts": today_counts})
+    seen_dates.add(today)
+    for jp in sorted(HERE.glob("inventory-*.json")):
+        try:
+            date = jp.stem.replace("inventory-", "")
+            _dt.strptime(date, "%Y-%m-%d")  # validate
+        except Exception:
+            continue
+        if date in seen_dates:
+            continue
+        try:
+            d = json.loads(jp.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        c: dict[str, int] = {}
+        for r in d.get("rows") or []:
+            b = r.get("bucket") or "Unknown"
+            c[b] = c.get(b, 0) + 1
+        history.append({"date": date, "counts": c})
+        seen_dates.add(date)
+    history.sort(key=lambda e: e["date"])
+
+    (HERE / "history.json").write_text(json.dumps(history, indent=2), encoding="utf-8")
+    print(f"[refresh] wrote history.json ({len(history)} day(s))")
+
+    # Embed history in the artifact's data block so the routine's merge picks it up
+    embed["history"] = history
+
     data_safe = json.dumps(embed, separators=(",", ":")).replace("</", "<\\/")
     html = TEMPLATE.read_text(encoding="utf-8").replace("__DATA__", data_safe, 1)
     (HERE / "inventory.html").write_text(html, encoding="utf-8")

@@ -33,6 +33,11 @@ python3 refresh.py
 #   Use the Artifact tool with url=https://claude.ai/artifact/QUA2ou6G24VVrgC1SE6Ni6
 ```
 
-## Daily cloud refresh
+## Daily cloud refresh (two-stage, no local machine involved)
 
-A scheduled Anthropic-hosted routine runs `refresh.py` and re-publishes the artifact once a day. See `~/.claude/…/routines/` for the schedule definition (managed via the `schedule` skill).
+1. **GitHub Actions** — `.github/workflows/refresh.yml` fires daily at 10:00 UTC (6 AM ET during DST). It runs `refresh.py`, using the `GSC_KEY_JSON` repo secret, then commits the fresh `inventory.html` and `bucket-summary.txt` back to `main`.
+2. **Anthropic scheduled routine** `trig_01KaNQzkb6P76T7r3XM1bxpg` — fires 30 min later at 10:30 UTC. Clones the freshly-updated repo and publishes `inventory.html` to the Claude artifact via the Artifact tool.
+
+Why the split: Anthropic's routine environment has an outbound-egress proxy that only allows Anthropic APIs, PyPI, npm, and GitHub — it can't reach `releasedsolutions.net` or `*.googleapis.com`. GitHub Actions has no such restriction, so it does the fetch. The routine handles only the artifact publish (which uses Anthropic's own API and is allowed).
+
+**GSC key lives only in `GSC_KEY_JSON` GitHub Actions secret** — not in the routine prompt or the repo. Rotate via GCP console then update the secret with `gh secret set GSC_KEY_JSON -R ReleasedSolutionsDev/rs-gsc-inventory < path/to/new-key.json`.
