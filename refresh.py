@@ -204,9 +204,16 @@ def main() -> int:
     counts: dict[str, int] = {}
     for row in rows:
         counts[row["bucket"]] = counts.get(row["bucket"], 0) + 1
+    ordered = ["Indexed", "Not Discovered", "Discovered", "Crawled"]
+    parts = [f"{counts[b]} {b}" for b in ordered if counts.get(b)]
+    parts += [f"{n} {b}" for b, n in counts.items() if b not in ordered]
+    summary = " · ".join(parts)
+    (HERE / "bucket-summary.txt").write_text(summary + "\n", encoding="utf-8")
+
     print("\n== bucket summary ==")
     for bucket, n in sorted(counts.items(), key=lambda x: -x[1]):
         print(f"  {n:3d}  {bucket}")
+    print(f"\n{summary}")
 
     return 0
 

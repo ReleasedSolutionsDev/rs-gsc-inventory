@@ -1,7 +1,6 @@
 *.json
 !inventory-*.json
 inventory-*.csv
-inventory.html
 inventory.log
 gsc-service-account.json
 .venv/
