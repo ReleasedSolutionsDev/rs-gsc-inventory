@@ -1,7 +1,7 @@
 {
   "site": "sc-domain:releasedsolutions.net",
   "sitemap": "https://releasedsolutions.net/sitemap.xml",
-  "generated_utc": "2026-09-21T12:35:51+00:00",
+  "generated_utc": "2026-09-21T12:48:13+00:00",
   "total": 97,
   "rows": [
     {
@@ -436,8 +436,8 @@
     {
       "url": "https://releasedsolutions.net/google-page-speed-test-does-it-matter/",
       "verdict": "NEUTRAL",
-      "coverage": "Discovered - currently not indexed",
-      "bucket": "Discovered",
+      "coverage": "URL is unknown to Google",
+      "bucket": "Not Discovered",
       "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "indexing": "INDEXING_STATE_UNSPECIFIED",
       "user_canonical": "",
@@ -787,8 +787,8 @@
     {
       "url": "https://releasedsolutions.net/rock-review-optimize-create-and-kickstart-your-online-presence/",
       "verdict": "NEUTRAL",
-      "coverage": "Discovered - currently not indexed",
-      "bucket": "Discovered",
+      "coverage": "URL is unknown to Google",
+      "bucket": "Not Discovered",
       "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "indexing": "INDEXING_STATE_UNSPECIFIED",
       "user_canonical": "",
@@ -800,8 +800,8 @@
     {
       "url": "https://releasedsolutions.net/sample-page/",
       "verdict": "NEUTRAL",
-      "coverage": "Discovered - currently not indexed",
-      "bucket": "Discovered",
+      "coverage": "URL is unknown to Google",
+      "bucket": "Not Discovered",
       "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "indexing": "INDEXING_STATE_UNSPECIFIED",
       "user_canonical": "",

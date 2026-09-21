@@ -1,0 +1,20 @@
+[
+  {
+    "date": "2026-09-20",
+    "counts": {
+      "Indexed": 66,
+      "Crawled": 9,
+      "Not Discovered": 13,
+      "Discovered": 6
+    }
+  },
+  {
+    "date": "2026-09-21",
+    "counts": {
+      "Indexed": 68,
+      "Crawled": 9,
+      "Not Discovered": 14,
+      "Discovered": 6
+    }
+  }
+]
