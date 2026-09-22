@@ -16,5 +16,14 @@
       "Not Discovered": 18,
       "Discovered": 3
     }
+  },
+  {
+    "date": "2026-09-22",
+    "counts": {
+      "Indexed": 72,
+      "Crawled": 8,
+      "Not Discovered": 12,
+      "Discovered": 5
+    }
   }
 ]
