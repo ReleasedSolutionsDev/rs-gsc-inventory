@@ -131,17 +131,29 @@ def main() -> int:
 
     rows: list[dict] = []
     for i, u in enumerate(urls, 1):
-        try:
-            r = sc.urlInspection().index().inspect(body={
-                "inspectionUrl": u, "siteUrl": SITE
-            }).execute()
-        except HttpError as e:
-            print(f"  [{i:3d}/{len(urls)}] ERROR  {u} :: {e}")
+        # Retry the inspection call: Google occasionally times out or 5xx's.
+        # A single flaky call MUST NOT kill the whole day's run.
+        r = None
+        last_err: Exception | None = None
+        for attempt in range(1, 4):  # 3 tries total
+            try:
+                r = sc.urlInspection().index().inspect(body={
+                    "inspectionUrl": u, "siteUrl": SITE
+                }).execute()
+                break
+            except Exception as e:  # noqa: BLE001 — HttpError, TimeoutError, socket.timeout, ssl.SSLError all fair game
+                last_err = e
+                wait = 2 ** attempt  # 2s, 4s, 8s
+                print(f"  [{i:3d}/{len(urls)}] retry {attempt} in {wait}s :: {type(e).__name__}: {str(e)[:80]}")
+                time.sleep(wait)
+        if r is None:
+            print(f"  [{i:3d}/{len(urls)}] ERROR  {u} :: {last_err}")
             rows.append({
-                "url": u, "verdict": "ERROR", "coverage": str(e)[:80],
+                "url": u, "verdict": "ERROR", "coverage": str(last_err)[:80],
                 "bucket": "Error", "robots": "", "indexing": "",
                 "user_canonical": "", "google_canonical": "",
                 "canonical_match": "", "last_crawl": "", "fetch": "",
+                "live_status": 0,
             })
             continue
 
