@@ -38,10 +38,10 @@
   {
     "date": "2026-09-25",
     "counts": {
-      "Indexed": 79,
-      "Crawled": 10,
-      "Not Discovered": 6,
-      "Discovered": 4
+      "Indexed": 85,
+      "Not Discovered": 5,
+      "Discovered": 4,
+      "Crawled": 6
     }
   }
 ]
