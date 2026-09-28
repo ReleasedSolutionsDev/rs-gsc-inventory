@@ -280,6 +280,52 @@ def main() -> int:
     # Embed history in the artifact's data block so the routine's merge picks it up
     embed["history"] = history
 
+    # --- Merge in perf / opportunities / algo-updates if present ---
+    def _load_json(fname):
+        p = HERE / fname
+        if not p.exists():
+            return None
+        try:
+            return json.loads(p.read_text(encoding="utf-8"))
+        except Exception as e:
+            print(f"[refresh] couldn't parse {fname}: {e}", file=sys.stderr)
+            return None
+
+    perf = _load_json("perf-latest.json")
+    if perf:
+        # only include what the artifact will render — keep it lean
+        embed["perf"] = {
+            "generated_utc": perf.get("generated_utc"),
+            "period_days": perf.get("period_days"),
+            "start_date": perf.get("start_date"),
+            "end_date": perf.get("end_date"),
+            "totals": perf.get("totals"),
+            "daily": perf.get("daily"),
+            "top_queries": sorted(perf.get("by_query", []),
+                                   key=lambda r: -r["clicks"])[:50],
+            "top_pages":   sorted(perf.get("by_page", []),
+                                   key=lambda r: -r["clicks"])[:50],
+        }
+        print(f"[refresh] embedded perf ({perf.get('period_days')} days)")
+
+    opps = _load_json("opportunities-latest.json")
+    if opps:
+        embed["opportunities"] = {
+            "generated_utc": opps.get("generated_utc"),
+            "windows": opps.get("windows"),
+            "thresholds": opps.get("thresholds"),
+            "near_page_1": opps.get("near_page_1", [])[:100],
+            "low_ctr":     opps.get("low_ctr", [])[:100],
+            "losing_pages": opps.get("losing_pages", [])[:50],
+        }
+        print(f"[refresh] embedded opportunities ({len(opps.get('near_page_1', []))} near, "
+              f"{len(opps.get('low_ctr', []))} low_ctr, {len(opps.get('losing_pages', []))} losing)")
+
+    algo = _load_json("algo-updates.json")
+    if algo:
+        embed["algo_updates"] = algo.get("updates", [])
+        print(f"[refresh] embedded algo_updates ({len(algo.get('updates', []))} entries)")
+
     data_safe = json.dumps(embed, separators=(",", ":")).replace("</", "<\\/")
     html = TEMPLATE.read_text(encoding="utf-8").replace("__DATA__", data_safe, 1)
     (HERE / "inventory.html").write_text(html, encoding="utf-8")

@@ -1,0 +1,20 @@
+{
+  "_comment": "Google confirmed ranking updates. Hand-curated; the artifact overlays these dates on the trend chart so index/traffic movements can be interpreted against known Google activity. Add new updates as Google announces them at https://developers.google.com/search/updates/ranking.",
+  "source": "https://developers.google.com/search/updates/ranking",
+  "updates": [
+    { "date": "2024-03-05", "end_date": "2024-04-19", "name": "March 2024 Core Update", "type": "core" },
+    { "date": "2024-03-05", "end_date": "2024-03-20", "name": "March 2024 Spam Update", "type": "spam" },
+    { "date": "2024-05-06", "end_date": "2024-05-06", "name": "Site Reputation Abuse Policy", "type": "policy" },
+    { "date": "2024-06-20", "end_date": "2024-06-27", "name": "June 2024 Spam Update", "type": "spam" },
+    { "date": "2024-08-15", "end_date": "2024-09-03", "name": "August 2024 Core Update", "type": "core" },
+    { "date": "2024-11-11", "end_date": "2024-12-05", "name": "November 2024 Core Update", "type": "core" },
+    { "date": "2024-12-12", "end_date": "2024-12-18", "name": "December 2024 Core Update", "type": "core" },
+    { "date": "2024-12-19", "end_date": "2024-12-26", "name": "December 2024 Spam Update", "type": "spam" },
+    { "date": "2025-03-13", "end_date": "2025-03-27", "name": "March 2025 Core Update", "type": "core" },
+    { "date": "2025-06-30", "end_date": "2025-07-17", "name": "June 2025 Core Update", "type": "core" },
+    { "date": "2025-11-05", "end_date": "2025-11-23", "name": "November 2025 Core Update", "type": "core" },
+    { "date": "2026-03-10", "end_date": "2026-03-28", "name": "March 2026 Core Update", "type": "core" },
+    { "date": "2026-06-15", "end_date": "2026-07-02", "name": "June 2026 Core Update", "type": "core" },
+    { "date": "2026-09-05", "end_date": "2026-09-25", "name": "September 2026 Spam Update", "type": "spam" }
+  ]
+}

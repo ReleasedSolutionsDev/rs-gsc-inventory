@@ -1,6 +1,9 @@
 *.json
 !inventory-*.json
 !history.json
+!perf-*.json
+!opportunities-*.json
+!algo-updates.json
 inventory-*.csv
 inventory.log
 gsc-service-account.json
