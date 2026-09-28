@@ -1,1 +1,1 @@
-83 Indexed · 5 Not Discovered · 4 Discovered · 8 Crawled · 2 Error
+83 Indexed · 5 Not Discovered · 4 Discovered · 8 Crawled · 2 Stale (API error)

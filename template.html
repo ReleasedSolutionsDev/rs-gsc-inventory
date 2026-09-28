@@ -445,6 +445,8 @@
     <div class="item"><span class="pill warn">Crawled</span> visited, chose not to index</div>
     <div class="item"><span class="pill dim">Not Discovered</span> Google doesn't know about it yet</div>
     <div class="item"><span class="pill warn">Stale</span> Google shows 404 but URL is live — request re-crawl</div>
+    <div class="item"><span class="pill info">Stale (API error)</span> carried from yesterday; Google API failed today</div>
+    <div class="item"><span class="pill dim">API error</span> Google API failed and we have no prior data</div>
     <div class="item"><span class="pill err">404</span> confirmed dead URL</div>
   </div>
 
@@ -601,10 +603,11 @@
   }
 
   // ---- bucket tiles ----
-  const bucketOrder = ["Indexed","Not Discovered","Discovered","Crawled","Stale","404","Soft 404"];
+  const bucketOrder = ["Indexed","Not Discovered","Discovered","Crawled","Stale","Stale (API error)","API error","404","Soft 404"];
   const bucketClass = {
     "Indexed": "ok", "Discovered": "info", "Crawled": "warn", "Not Discovered": "dim",
     "Stale": "warn",
+    "Stale (API error)": "info", "API error": "dim",
     "Noindex": "dim", "Duplicate": "warn", "Alternate": "info",
     "404": "err", "Soft 404": "err", "Blocked": "err", "Server error": "err",
   };
@@ -614,6 +617,8 @@
     "Discovered": "found but not yet crawled",
     "Crawled": "crawled but not indexed",
     "Stale": "Google shows 404 but the URL is live — request re-crawl",
+    "Stale (API error)": "carried from yesterday; Google's URL Inspection API failed today",
+    "API error": "Google's URL Inspection API failed and we have no prior data",
     "404": "live URL confirmed 404 (deleted or moved)",
   };
   const counts = {};

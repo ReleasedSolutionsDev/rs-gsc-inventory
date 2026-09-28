@@ -129,13 +129,33 @@ def main() -> int:
     urls = sitemap_urls(SITEMAP)
     print(f"[refresh] {len(urls)} URLs to inspect")
 
+    # Load the most recent previous inventory so we can carry state forward
+    # when Google's URL Inspection API returns transient 500s on individual URLs.
+    # Without this, a Google-side glitch causes a URL that was Indexed yesterday
+    # to display as "Error" today, which is misleading.
+    prev_by_url: dict[str, dict] = {}
+    today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    for jp in sorted(HERE.glob("inventory-*.json"), reverse=True):
+        date = jp.stem.replace("inventory-", "")
+        if date >= today_str:
+            continue
+        try:
+            d = json.loads(jp.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        for row in d.get("rows", []):
+            prev_by_url[row["url"]] = row
+        print(f"[refresh] loaded {len(prev_by_url)} URLs from previous snapshot {jp.name}")
+        break
+
     rows: list[dict] = []
     for i, u in enumerate(urls, 1):
         # Retry the inspection call: Google occasionally times out or 5xx's.
         # A single flaky call MUST NOT kill the whole day's run.
         r = None
         last_err: Exception | None = None
-        for attempt in range(1, 4):  # 3 tries total
+        # 5 attempts, 2/4/8/16/30 s backoff. GSC 500s usually clear within a minute.
+        for attempt, wait in enumerate([2, 4, 8, 16, 30], start=1):
             try:
                 r = sc.urlInspection().index().inspect(body={
                     "inspectionUrl": u, "siteUrl": SITE
@@ -143,18 +163,33 @@ def main() -> int:
                 break
             except Exception as e:  # noqa: BLE001 — HttpError, TimeoutError, socket.timeout, ssl.SSLError all fair game
                 last_err = e
-                wait = 2 ** attempt  # 2s, 4s, 8s
                 print(f"  [{i:3d}/{len(urls)}] retry {attempt} in {wait}s :: {type(e).__name__}: {str(e)[:80]}")
-                time.sleep(wait)
+                if attempt < 5:
+                    time.sleep(wait)
         if r is None:
-            print(f"  [{i:3d}/{len(urls)}] ERROR  {u} :: {last_err}")
-            rows.append({
-                "url": u, "verdict": "ERROR", "coverage": str(last_err)[:80],
-                "bucket": "Error", "robots": "", "indexing": "",
-                "user_canonical": "", "google_canonical": "",
-                "canonical_match": "", "last_crawl": "", "fetch": "",
-                "live_status": 0,
-            })
+            # Google's URL Inspection API failed on this URL. Rather than mislabel
+            # it as "Error" (which sounds like something is wrong with the page),
+            # carry forward yesterday's snapshot if we have one, and mark it as
+            # "Stale (API error)" so the artifact makes the distinction clear.
+            # Fall back to "API error" only when we truly have no prior data.
+            prior = prev_by_url.get(u)
+            if prior:
+                carried = dict(prior)
+                carried["bucket"] = "Stale (API error)"
+                carried["coverage"] = f"Carried from prior snapshot; Google API error: {str(last_err)[:80]}"
+                carried["verdict"] = "STALE"
+                carried["live_status"] = 0
+                rows.append(carried)
+                print(f"  [{i:3d}/{len(urls)}] Stale (API error) — carried yesterday's {prior.get('bucket')}  {u}")
+            else:
+                rows.append({
+                    "url": u, "verdict": "ERROR", "coverage": str(last_err)[:80],
+                    "bucket": "API error", "robots": "", "indexing": "",
+                    "user_canonical": "", "google_canonical": "",
+                    "canonical_match": "", "last_crawl": "", "fetch": "",
+                    "live_status": 0,
+                })
+                print(f"  [{i:3d}/{len(urls)}] API error (no prior data)  {u}")
             continue
 
         idx = r.get("inspectionResult", {}).get("indexStatusResult", {}) or {}
