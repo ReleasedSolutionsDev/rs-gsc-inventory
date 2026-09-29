@@ -75,8 +75,8 @@
     "date": "2026-09-29",
     "counts": {
       "Indexed": 87,
-      "Not Discovered": 4,
-      "Discovered": 5,
+      "Discovered": 7,
+      "Not Discovered": 2,
       "Crawled": 5
     }
   }
