@@ -1,0 +1,95 @@
+{
+  "site": "sc-domain:releasedsolutions.net",
+  "generated_utc": "2026-10-04T15:20:23+00:00",
+  "period_days": 90,
+  "windows": {
+    "recent": "2026-09-18 to 2026-10-01",
+    "prior": "2026-09-04 to 2026-09-17"
+  },
+  "thresholds": {
+    "near_page_1": {
+      "position_range": [
+        8,
+        20
+      ],
+      "min_impressions": 30
+    },
+    "low_ctr": {
+      "max_position": 10,
+      "min_impressions": 50,
+      "max_ctr": 0.02
+    },
+    "losing_pages": {
+      "min_prior_clicks": 10,
+      "decline_pct_threshold": 30
+    }
+  },
+  "near_page_1": [
+    {
+      "query": "release solutions",
+      "impressions": 317,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 17.7
+    },
+    {
+      "query": "online presence management",
+      "impressions": 297,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 12.2
+    },
+    {
+      "query": "website updates and optimization",
+      "impressions": 77,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 10.9
+    },
+    {
+      "query": "website maintenance and optimization",
+      "impressions": 51,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 19.4
+    },
+    {
+      "query": "presence management definition",
+      "impressions": 40,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 17.9
+    },
+    {
+      "query": "the power of a well-crafted sitemap why your small business needs one",
+      "impressions": 40,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 8.2
+    },
+    {
+      "query": "online presence management services",
+      "impressions": 31,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 19.7
+    }
+  ],
+  "low_ctr": [
+    {
+      "query": "social media marketing",
+      "impressions": 96,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 3.8
+    },
+    {
+      "query": "website support and optimization",
+      "impressions": 51,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 4.1
+    }
+  ],
+  "losing_pages": []
+}
