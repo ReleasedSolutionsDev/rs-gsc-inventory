@@ -1,0 +1,98 @@
+{
+  "site": "sc-domain:releasedsolutions.net",
+  "generated_utc": "2026-10-08T17:23:24+00:00",
+  "period_days": 90,
+  "windows": {
+    "recent": "2026-09-22 to 2026-10-05",
+    "prior": "2026-09-08 to 2026-09-21"
+  },
+  "thresholds": {
+    "near_page_1": {
+      "position_range": [
+        8,
+        20
+      ],
+      "min_impressions": 30
+    },
+    "low_ctr": {
+      "max_position": 10,
+      "min_impressions": 50,
+      "max_ctr": 0.02
+    },
+    "losing_pages": {
+      "min_prior_clicks": 10,
+      "decline_pct_threshold": 30
+    }
+  },
+  "near_page_1": [
+    {
+      "query": "release solutions",
+      "impressions": 323,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 18.2
+    },
+    {
+      "query": "online presence management",
+      "impressions": 262,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 17.1
+    },
+    {
+      "query": "website updates and optimization",
+      "impressions": 84,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 11.8
+    },
+    {
+      "query": "website maintenance and optimization",
+      "impressions": 58,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 18.8
+    },
+    {
+      "query": "presence management definition",
+      "impressions": 48,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 17.5
+    },
+    {
+      "query": "the power of a well-crafted sitemap why your small business needs one",
+      "impressions": 43,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 8.1
+    }
+  ],
+  "low_ctr": [
+    {
+      "query": "social media marketing",
+      "impressions": 94,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 3.7
+    },
+    {
+      "query": "website support and optimization",
+      "impressions": 63,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 4.1
+    }
+  ],
+  "losing_pages": [
+    {
+      "page": "https://releasedsolutions.net/google-ads-ai-review-summaries/",
+      "clicks_prior": 10,
+      "clicks_recent": 1,
+      "delta": -9,
+      "delta_pct": -90.0,
+      "position_recent": 3.7,
+      "position_prior": 7.1
+    }
+  ]
+}
