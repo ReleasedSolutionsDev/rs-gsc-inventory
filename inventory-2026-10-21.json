@@ -1,7 +1,7 @@
 {
   "site": "sc-domain:releasedsolutions.net",
   "sitemap": "https://releasedsolutions.net/sitemap.xml",
-  "generated_utc": "2026-10-21T09:24:29+00:00",
+  "generated_utc": "2026-10-21T15:26:21+00:00",
   "total": 127,
   "rows": [
     {
@@ -119,8 +119,8 @@
     {
       "url": "https://releasedsolutions.net/ai-managed-online-presence/",
       "verdict": "NEUTRAL",
-      "coverage": "URL is unknown to Google",
-      "bucket": "Not Discovered",
+      "coverage": "Discovered - currently not indexed",
+      "bucket": "Discovered",
       "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "indexing": "INDEXING_STATE_UNSPECIFIED",
       "user_canonical": "",
@@ -1554,7 +1554,7 @@
       "user_canonical": "https://releasedsolutions.net/website-lead-generation-customer-support/",
       "google_canonical": "https://releasedsolutions.net/website-lead-generation-customer-support/",
       "canonical_match": "match",
-      "last_crawl": "2026-10-01T19:02:26Z",
+      "last_crawl": "2026-10-21T08:31:33Z",
       "fetch": "SUCCESSFUL",
       "live_status": 0
     },
