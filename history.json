@@ -276,5 +276,13 @@
       "Crawled": 18,
       "Discovered": 7
     }
+  },
+  {
+    "date": "2026-10-22",
+    "counts": {
+      "Indexed": 104,
+      "Crawled": 17,
+      "Discovered": 7
+    }
   }
 ]
