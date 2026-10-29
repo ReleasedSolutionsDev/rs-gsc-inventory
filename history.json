@@ -337,5 +337,15 @@
       "Not Discovered": 2,
       "Discovered": 5
     }
+  },
+  {
+    "date": "2026-10-29",
+    "counts": {
+      "Indexed": 116,
+      "Crawled": 14,
+      "Discovered": 8,
+      "Not Discovered": 7,
+      "Excluded by \u2018noindex\u2019 tag": 1
+    }
   }
 ]

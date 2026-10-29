@@ -1,1 +1,1 @@
-114 Indexed · 2 Not Discovered · 5 Discovered · 15 Crawled
+116 Indexed · 7 Not Discovered · 8 Discovered · 14 Crawled · 1 Excluded by ‘noindex’ tag
