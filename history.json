@@ -456,5 +456,15 @@
       "Not Discovered": 4,
       "Excluded by \u2018noindex\u2019 tag": 1
     }
+  },
+  {
+    "date": "2026-11-10",
+    "counts": {
+      "Indexed": 126,
+      "Crawled": 15,
+      "Discovered": 10,
+      "Not Discovered": 6,
+      "Excluded by \u2018noindex\u2019 tag": 1
+    }
   }
 ]
