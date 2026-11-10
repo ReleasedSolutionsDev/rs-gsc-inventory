@@ -1,8 +1,8 @@
 {
   "site": "sc-domain:releasedsolutions.net",
   "sitemap": "https://releasedsolutions.net/sitemap.xml",
-  "generated_utc": "2026-11-10T12:56:01+00:00",
-  "total": 158,
+  "generated_utc": "2026-11-10T18:03:37+00:00",
+  "total": 161,
   "rows": [
     {
       "url": "https://releasedsolutions.net/",
@@ -14,7 +14,7 @@
       "user_canonical": "https://releasedsolutions.net/",
       "google_canonical": "https://releasedsolutions.net/",
       "canonical_match": "match",
-      "last_crawl": "2026-11-10T06:47:07Z",
+      "last_crawl": "2026-11-10T14:39:37Z",
       "fetch": "SUCCESSFUL",
       "live_status": 0
     },
@@ -142,6 +142,20 @@
       "canonical_match": "match",
       "last_crawl": "2026-11-09T18:46:42Z",
       "fetch": "SUCCESSFUL",
+      "live_status": 0
+    },
+    {
+      "url": "https://releasedsolutions.net/ai-cost-per-task/",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google",
+      "bucket": "Not Discovered",
+      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "indexing": "INDEXING_STATE_UNSPECIFIED",
+      "user_canonical": "",
+      "google_canonical": "",
+      "canonical_match": "",
+      "last_crawl": "",
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
       "live_status": 0
     },
     {
@@ -343,8 +357,8 @@
     {
       "url": "https://releasedsolutions.net/buyer-intent-keywords/",
       "verdict": "NEUTRAL",
-      "coverage": "URL is unknown to Google",
-      "bucket": "Not Discovered",
+      "coverage": "Discovered - currently not indexed",
+      "bucket": "Discovered",
       "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "indexing": "INDEXING_STATE_UNSPECIFIED",
       "user_canonical": "",
@@ -875,8 +889,8 @@
     {
       "url": "https://releasedsolutions.net/google-september-2026-spam-update-what-im-watching/",
       "verdict": "NEUTRAL",
-      "coverage": "URL is unknown to Google",
-      "bucket": "Not Discovered",
+      "coverage": "Discovered - currently not indexed",
+      "bucket": "Discovered",
       "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "indexing": "INDEXING_STATE_UNSPECIFIED",
       "user_canonical": "",
@@ -959,8 +973,8 @@
     {
       "url": "https://releasedsolutions.net/how-to-choose-a-website-support-and-marketing-service-plan-for-your-business/",
       "verdict": "NEUTRAL",
-      "coverage": "URL is unknown to Google",
-      "bucket": "Not Discovered",
+      "coverage": "Discovered - currently not indexed",
+      "bucket": "Discovered",
       "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "indexing": "INDEXING_STATE_UNSPECIFIED",
       "user_canonical": "",
@@ -1251,6 +1265,20 @@
       "live_status": 0
     },
     {
+      "url": "https://releasedsolutions.net/multi-agent-workflow-business/",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google",
+      "bucket": "Not Discovered",
+      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "indexing": "INDEXING_STATE_UNSPECIFIED",
+      "user_canonical": "",
+      "google_canonical": "",
+      "canonical_match": "",
+      "last_crawl": "",
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "live_status": 0
+    },
+    {
       "url": "https://releasedsolutions.net/onboarding-digital-marketing-startup/",
       "verdict": "PASS",
       "coverage": "Submitted and indexed",
@@ -1374,6 +1402,20 @@
       "canonical_match": "match",
       "last_crawl": "2026-10-20T11:41:52Z",
       "fetch": "SUCCESSFUL",
+      "live_status": 0
+    },
+    {
+      "url": "https://releasedsolutions.net/race-growth-frameworks/",
+      "verdict": "NEUTRAL",
+      "coverage": "URL is unknown to Google",
+      "bucket": "Not Discovered",
+      "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "indexing": "INDEXING_STATE_UNSPECIFIED",
+      "user_canonical": "",
+      "google_canonical": "",
+      "canonical_match": "",
+      "last_crawl": "",
+      "fetch": "PAGE_FETCH_STATE_UNSPECIFIED",
       "live_status": 0
     },
     {
@@ -1533,8 +1575,8 @@
     {
       "url": "https://releasedsolutions.net/service-areas/key-largo/",
       "verdict": "NEUTRAL",
-      "coverage": "URL is unknown to Google",
-      "bucket": "Not Discovered",
+      "coverage": "Discovered - currently not indexed",
+      "bucket": "Discovered",
       "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
       "indexing": "INDEXING_STATE_UNSPECIFIED",
       "user_canonical": "",
