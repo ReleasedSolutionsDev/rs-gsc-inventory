@@ -472,8 +472,8 @@
     "counts": {
       "Indexed": 132,
       "Crawled": 15,
-      "Discovered": 10,
-      "Not Discovered": 4,
+      "Not Discovered": 9,
+      "Discovered": 5,
       "Excluded by \u2018noindex\u2019 tag": 1
     }
   }
