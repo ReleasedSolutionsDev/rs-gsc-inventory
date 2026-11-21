@@ -1,0 +1,158 @@
+{
+  "site": "sc-domain:releasedsolutions.net",
+  "generated_utc": "2026-11-21T17:26:53+00:00",
+  "period_days": 90,
+  "windows": {
+    "recent": "2026-11-05 to 2026-11-18",
+    "prior": "2026-10-22 to 2026-11-04"
+  },
+  "thresholds": {
+    "near_page_1": {
+      "position_range": [
+        8,
+        20
+      ],
+      "min_impressions": 30
+    },
+    "low_ctr": {
+      "max_position": 10,
+      "min_impressions": 50,
+      "max_ctr": 0.02
+    },
+    "losing_pages": {
+      "min_prior_clicks": 10,
+      "decline_pct_threshold": 30
+    }
+  },
+  "near_page_1": [
+    {
+      "query": "ai visibility assessment businessabc",
+      "impressions": 503,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 9.1
+    },
+    {
+      "query": "ai visibility assessment by businessabc",
+      "impressions": 310,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 10.1
+    },
+    {
+      "query": "release solutions",
+      "impressions": 211,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 16.4
+    },
+    {
+      "query": "website maintenance and optimization",
+      "impressions": 144,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 11.8
+    },
+    {
+      "query": "website updates and optimization",
+      "impressions": 70,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 12.2
+    },
+    {
+      "query": "complete web presence management",
+      "impressions": 69,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 15.6
+    },
+    {
+      "query": "online presence management company",
+      "impressions": 53,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 13.7
+    },
+    {
+      "query": "the power of a well-crafted sitemap why your small business needs one",
+      "impressions": 52,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 8.5
+    },
+    {
+      "query": "free marketing assessment",
+      "impressions": 45,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 19.7
+    },
+    {
+      "query": "online local presence management",
+      "impressions": 39,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 13.8
+    },
+    {
+      "query": "small business digital marketing audit",
+      "impressions": 35,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 10.1
+    },
+    {
+      "query": "brand url",
+      "impressions": 33,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 16.9
+    },
+    {
+      "query": "link branding",
+      "impressions": 32,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 19.6
+    }
+  ],
+  "low_ctr": [
+    {
+      "query": "ai visibility assessment businessabc",
+      "impressions": 503,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 9.1
+    },
+    {
+      "query": "website support and optimization",
+      "impressions": 105,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 4.4
+    },
+    {
+      "query": "how to use branded links for influencer campaigns",
+      "impressions": 71,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 6.1
+    },
+    {
+      "query": "social media marketing",
+      "impressions": 53,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 3.2
+    },
+    {
+      "query": "the power of a well-crafted sitemap why your small business needs one",
+      "impressions": 52,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 8.5
+    }
+  ],
+  "losing_pages": []
+}
